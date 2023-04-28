@@ -3,6 +3,7 @@ import {InjectRepository} from "@nestjs/typeorm";
 import {FileEntity} from "./entities/file.entity";
 import {Repository} from "typeorm";
 import {FileType} from "./files.types";
+import {UpdateFileDto} from "./dto/update-file.dto";
 
 
 @Injectable()
@@ -59,7 +60,7 @@ export class FilesService {
     }
     
     
-    // update(id: number, updateFileDto: UpdateFileDto) {
-    //     return `This action updates a #${id} file`;
-    // }
+    update(id: number, updateFileDto: UpdateFileDto) {
+        return `This action updates a #${id} file`;
+    }
 }
